@@ -1,0 +1,18 @@
+name: Daily Cron
+
+on:
+  schedule:
+    - cron: "0 0 * * *"
+
+jobs:
+  daily:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Run daily task
+        run: |
+          # Các lệnh hoặc công việc bạn muốn thực hiện hàng ngày
+
